@@ -1,0 +1,12 @@
+[
+  {
+    "name": "basementuniverse",
+    "type": "image",
+    "args": ["content/basementuniverse.png"]
+  },
+  {
+    "name": "bleep",
+    "type": "audio",
+    "args": ["content/bleep.wav"]
+  }
+]
