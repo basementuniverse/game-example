@@ -12,13 +12,13 @@
   "author": "Gordon Larrigan <gordonlarrigan@gmail.com> (https://gordonlarrigan.com)",
   "license": "MIT",
   "dependencies": {
-    "@basementuniverse/camera": "^1.0.0",
-    "@basementuniverse/content-manager": "^1.0.1",
-    "@basementuniverse/debug": "^1.0.0",
-    "@basementuniverse/input-manager": "^1.0.0",
-    "@basementuniverse/scene-manager": "^1.0.0",
+    "@basementuniverse/camera": "^1.1.0",
+    "@basementuniverse/content-manager": "^1.0.3",
+    "@basementuniverse/debug": "^1.0.2",
+    "@basementuniverse/input-manager": "^1.0.2",
+    "@basementuniverse/scene-manager": "^1.0.2",
     "@basementuniverse/utils": "^1.0.0",
-    "@basementuniverse/vec": "^1.0.0"
+    "@basementuniverse/vec": "^1.0.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
