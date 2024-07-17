@@ -1,12 +1,89 @@
 [
   {
-    "name": "basementuniverse",
+    "name": "basement-universe",
     "type": "image",
-    "args": ["content/basementuniverse.png"]
+    "args": ["./content/basement-universe.png"]
   },
   {
     "name": "bleep",
     "type": "audio",
-    "args": ["content/bleep.wav"]
+    "args": ["./content/bleep.wav"]
+  },
+  {
+    "name": "blur-shader",
+    "type": "text",
+    "args": ["http://localhost:8080/content/blur.glsl"],
+    "processors": [
+      {
+        "name": "shader"
+      }
+    ]
+  },
+  {
+    "name": "menu-background",
+    "type": "image",
+    "args": ["./content/menu-background.png"]
+  },
+  {
+    "name": "menu-title",
+    "type": "image",
+    "args": ["./content/menu-title.png"]
+  },
+  {
+    "name": "character-spritesheet",
+    "type": "image",
+    "args": ["./content/character-spritesheet.png"]
+  },
+  {
+    "name": "character-texture-atlas-data",
+    "type": "json",
+    "args": ["http://localhost:8080/content/character-texture-atlas.json"],
+    "processors": [
+      {
+        "name": "textureAtlas",
+        "args": ["character-spritesheet"]
+      }
+    ]
+  },
+  {
+    "name": "character-sprite-data",
+    "type": "json",
+    "args": ["http://localhost:8080/content/character-sprite.json"],
+    "processors": [
+      {
+        "name": "sprite"
+      }
+    ]
+  },
+  {
+    "name": "terrain-tilesheet",
+    "type": "image",
+    "args": ["./content/terrain-tilesheet.png"]
+  },
+  {
+    "name": "terrain-texture-atlas-data",
+    "type": "json",
+    "args": ["http://localhost:8080/content/terrain-texture-atlas.json"],
+    "processors": [
+      {
+        "name": "textureAtlas",
+        "args": ["terrain-tilesheet"]
+      }
+    ]
+  },
+  {
+    "name": "tile-map-data",
+    "type": "json",
+    "args": ["http://localhost:8080/content/tile-map.json"],
+    "processors": [
+      {
+        "name": "tileMap",
+        "args": [
+          {
+            "decompressData": true
+          }
+        ]
+      }
+    ]
   }
 ]

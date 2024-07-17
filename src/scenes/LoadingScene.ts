@@ -1,22 +1,23 @@
 import { vec } from '@basementuniverse/vec';
-import Game from './Game';
-import SceneManager, { Scene, SceneTransitionState } from '@basementuniverse/scene-manager';
+import Game from '../Game';
+import SceneManager, {
+  Scene,
+  SceneTransitionState,
+} from '@basementuniverse/scene-manager';
 import ContentManager from '@basementuniverse/content-manager';
-import * as constants from './constants';
-import * as content from '../content/content.json';
-import { MenuScene } from './MenuScene';
+import * as constants from '../constants';
+import * as content from '../../content/content.json';
+import IntroScene from './IntroScene';
+import { ProgressBar } from '../actors';
 
-export class LoadingScene extends Scene {
+export default class LoadingScene extends Scene {
   private static readonly TRANSITION_TIME: number = 0.5;
 
   private static readonly COOLDOWN_TIME: number = 2.5;
 
   private finishedLoadingContent: boolean;
 
-  private progressBar: {
-    position: vec;
-    progress: number;
-  };
+  private progressBar: ProgressBar;
 
   private cooldownTime: number = 0;
 
@@ -28,7 +29,10 @@ export class LoadingScene extends Scene {
 
   public initialise() {
     this.finishedLoadingContent = false;
-    this.progressBar = { position: vec(), progress: 0 };
+    this.progressBar = new ProgressBar(
+      vec.map(vec.mul(Game.screen, 1 / 2), Math.floor),
+      vec(200, 40)
+    );
     this.cooldownTime = LoadingScene.COOLDOWN_TIME;
 
     ContentManager.load(content).then(() => {
@@ -41,28 +45,27 @@ export class LoadingScene extends Scene {
   public update(dt: number) {
     this.progressBar.position = vec.map(vec.mul(Game.screen, 1 / 2), Math.floor);
     this.progressBar.progress = ContentManager.progress;
+    this.progressBar.update(dt);
+
     if (this.finishedLoadingContent) {
       this.cooldownTime -= dt;
     }
 
     if (this.cooldownTime <= 0) {
       SceneManager.pop();
-      SceneManager.push(new MenuScene());
+      SceneManager.push(new IntroScene());
     }
   }
 
   public draw(context: CanvasRenderingContext2D) {
     context.save();
+
     if (this.transitionState !== SceneTransitionState.None) {
       context.globalAlpha = this.transitionAmount;
     }
-    context.fillStyle = 'white';
-    context.fillRect(
-      this.progressBar.position.x,
-      this.progressBar.position.y,
-      this.progressBar.progress * 100,
-      20
-    );
+
+    this.progressBar.draw(context);
+
     context.restore();
   }
 }

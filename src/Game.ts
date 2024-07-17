@@ -3,9 +3,13 @@ import ContentManager from '@basementuniverse/content-manager';
 import Debug from '@basementuniverse/debug';
 import InputManager from '@basementuniverse/input-manager';
 import SceneManager from '@basementuniverse/scene-manager';
-import { LoadingScene } from './LoadingScene';
+import LoadingScene from './scenes/LoadingScene';
 import * as config from './config.json';
 import * as constants from './constants';
+import { ShaderProcessor } from './content-processors/shader.content-processor';
+import { textureAtlasContentProcessor } from '@basementuniverse/texture-atlas';
+import { tileMapOptionsContentProcessor } from '@basementuniverse/tile-map';
+import { spriteOptionsContentProcessor } from '@basementuniverse/sprite';
 
 export default class Game {
   private canvas: HTMLCanvasElement;
@@ -51,7 +55,18 @@ export default class Game {
 
   public initialise() {
     // Initialise subsystems
-    ContentManager.initialise({ simulateSlowLoading: constants.DEBUG });
+    ContentManager.initialise({
+      simulateSlowLoading: constants.DEBUG,
+      slowLoadingTimeMin: 100,
+      slowLoadingTimeMax: 500,
+      processors: {
+        shader: ShaderProcessor,
+        textureAtlas: textureAtlasContentProcessor,
+        tileMap: tileMapOptionsContentProcessor,
+        sprite: spriteOptionsContentProcessor,
+      },
+      throwOnNotFound: true,
+    });
     Debug.initialise();
     InputManager.initialise();
     SceneManager.initialise();

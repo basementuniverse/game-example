@@ -7,18 +7,22 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "http-server -a localhost -p 8080 -o index.html"
+    "start": "http-server -a localhost -p 8080 -o index.html -c-1"
   },
   "author": "Gordon Larrigan <gordonlarrigan@gmail.com> (https://gordonlarrigan.com)",
   "license": "MIT",
   "dependencies": {
-    "@basementuniverse/camera": "^1.1.0",
-    "@basementuniverse/content-manager": "^1.0.3",
-    "@basementuniverse/debug": "^1.0.2",
-    "@basementuniverse/input-manager": "^1.0.2",
-    "@basementuniverse/scene-manager": "^1.0.2",
-    "@basementuniverse/utils": "^1.0.0",
-    "@basementuniverse/vec": "^1.0.1"
+    "@basementuniverse/camera": "file:../camera",
+    "@basementuniverse/content-manager": "^1.1.2",
+    "@basementuniverse/debug": "^1.0.6",
+    "@basementuniverse/input-manager": "^1.0.5",
+    "@basementuniverse/scene-manager": "^1.1.2",
+    "@basementuniverse/sprite": "file:../sprite",
+    "@basementuniverse/texture-atlas": "file:../texture-atlas",
+    "@basementuniverse/tile-map": "file:../tile-map",
+    "@basementuniverse/utils": "^1.4.0",
+    "@basementuniverse/vec": "^1.0.2",
+    "shader-canvas": "^0.8.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
