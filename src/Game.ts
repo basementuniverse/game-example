@@ -1,5 +1,5 @@
 import { vec } from '@basementuniverse/vec';
-import ContentManager from '@basementuniverse/content-manager';
+import ContentManager, { ContentProcessor } from '@basementuniverse/content-manager';
 import Debug from '@basementuniverse/debug';
 import InputManager from '@basementuniverse/input-manager';
 import SceneManager from '@basementuniverse/scene-manager';
@@ -61,13 +61,15 @@ export default class Game {
       slowLoadingTimeMax: 500,
       processors: {
         shader: ShaderProcessor,
-        textureAtlas: textureAtlasContentProcessor,
-        tileMap: tileMapOptionsContentProcessor,
-        sprite: spriteOptionsContentProcessor,
+        textureAtlas: textureAtlasContentProcessor as unknown as ContentProcessor,
+        tileMap: tileMapOptionsContentProcessor as unknown as ContentProcessor,
+        sprite: spriteOptionsContentProcessor as unknown as ContentProcessor,
       },
       throwOnNotFound: true,
     });
-    Debug.initialise();
+    Debug.initialise({
+      lineMargin: 5,
+    });
     InputManager.initialise();
     SceneManager.initialise();
 
@@ -93,6 +95,7 @@ export default class Game {
     this.lastFrameTime = now;
     if (config.showFPS) {
       Debug.value('FPS', this.frameRate, { align: 'right' });
+      Debug.chart('FPS', this.frameRate, { minValue: 0, maxValue: 70 });
     }
 
     // Do game loop
@@ -115,6 +118,5 @@ export default class Game {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     SceneManager.draw(this.context);
-    Debug.draw(this.context);
   }
 }

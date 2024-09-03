@@ -8,6 +8,7 @@ import MenuScene from './MenuScene';
 import ContentManager from '@basementuniverse/content-manager';
 import { ShaderCanvas } from 'shader-canvas';
 import { clamp } from '@basementuniverse/utils';
+import Debug from '@basementuniverse/debug';
 
 export default class IntroScene extends Scene {
   private static readonly TRANSITION_TIME: number = 2;
@@ -72,6 +73,8 @@ export default class IntroScene extends Scene {
         this.logo.height
       );
     }
+
+    Debug.draw(context);
 
     context.restore();
   }

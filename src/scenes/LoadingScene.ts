@@ -9,6 +9,7 @@ import * as constants from '../constants';
 import * as content from '../../content/content.json';
 import IntroScene from './IntroScene';
 import { ProgressBar } from '../actors';
+import Debug from '@basementuniverse/debug';
 
 export default class LoadingScene extends Scene {
   private static readonly TRANSITION_TIME: number = 0.5;
@@ -65,6 +66,8 @@ export default class LoadingScene extends Scene {
     }
 
     this.progressBar.draw(context);
+
+    Debug.draw(context);
 
     context.restore();
   }
