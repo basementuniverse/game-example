@@ -1,4 +1,4 @@
-import { vec } from '@basementuniverse/vec';
+import { vec2 } from '@basementuniverse/vec';
 import Game from '../Game';
 import SceneManager, {
   Scene,
@@ -13,13 +13,10 @@ import Debug from '@basementuniverse/debug';
 
 export default class LoadingScene extends Scene {
   private static readonly TRANSITION_TIME: number = 0.5;
-
   private static readonly COOLDOWN_TIME: number = 2.5;
 
   private finishedLoadingContent: boolean;
-
   private progressBar: ProgressBar;
-
   private cooldownTime: number = 0;
 
   public constructor() {
@@ -31,8 +28,8 @@ export default class LoadingScene extends Scene {
   public initialise() {
     this.finishedLoadingContent = false;
     this.progressBar = new ProgressBar(
-      vec.map(vec.mul(Game.screen, 1 / 2), Math.floor),
-      vec(200, 40)
+      vec2.map(vec2.mul(Game.screen, 1 / 2), Math.floor),
+      vec2(200, 40)
     );
     this.cooldownTime = LoadingScene.COOLDOWN_TIME;
 
@@ -44,7 +41,10 @@ export default class LoadingScene extends Scene {
   }
 
   public update(dt: number) {
-    this.progressBar.position = vec.map(vec.mul(Game.screen, 1 / 2), Math.floor);
+    this.progressBar.position = vec2.map(
+      vec2.mul(Game.screen, 1 / 2),
+      Math.floor
+    );
     this.progressBar.progress = ContentManager.progress;
     this.progressBar.update(dt);
 

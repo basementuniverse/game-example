@@ -1,4 +1,4 @@
-import { vec } from '@basementuniverse/vec';
+import { vec2 } from '@basementuniverse/vec';
 import ContentManager, { ContentProcessor } from '@basementuniverse/content-manager';
 import Debug from '@basementuniverse/debug';
 import InputManager from '@basementuniverse/input-manager';
@@ -10,21 +10,17 @@ import { ShaderProcessor } from './content-processors/shader.content-processor';
 import { textureAtlasContentProcessor } from '@basementuniverse/texture-atlas';
 import { tileMapOptionsContentProcessor } from '@basementuniverse/tile-map';
 import { spriteOptionsContentProcessor } from '@basementuniverse/sprite';
+import { imageFontContentProcessor } from '@basementuniverse/image-font';
 
 export default class Game {
   private canvas: HTMLCanvasElement;
-
   private context: CanvasRenderingContext2D;
-
   private lastFrameTime: number;
-
   private lastFrameCountTime: number;
-
   private frameRate: number = 0;
-
   private frameCount: number = 0;
 
-  public static screen: vec;
+  public static screen: vec2;
 
   public constructor(container: HTMLElement | null) {
     if (container === null) {
@@ -61,9 +57,10 @@ export default class Game {
       slowLoadingTimeMax: 500,
       processors: {
         shader: ShaderProcessor,
-        textureAtlas: textureAtlasContentProcessor as unknown as ContentProcessor,
-        tileMap: tileMapOptionsContentProcessor as unknown as ContentProcessor,
-        sprite: spriteOptionsContentProcessor as unknown as ContentProcessor,
+        textureAtlas: textureAtlasContentProcessor,
+        tileMap: tileMapOptionsContentProcessor,
+        sprite: spriteOptionsContentProcessor,
+        imageFont: imageFontContentProcessor,
       },
       throwOnNotFound: true,
     });
@@ -105,7 +102,7 @@ export default class Game {
   }
 
   update(dt: number) {
-    Game.screen = vec(this.canvas.width, this.canvas.height);
+    Game.screen = vec2(this.canvas.width, this.canvas.height);
 
     Debug.value('status', ContentManager.status);
     Debug.value('progress', ContentManager.progress);

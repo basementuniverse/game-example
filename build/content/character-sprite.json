@@ -5,35 +5,51 @@
     "idle": {
       "e": {
         "name": "idle-e",
-        "imageNames": ["idle-e"]
+        "imageNames": [
+          "character-texture-atlas_idle-e"
+        ]
       },
       "se": {
         "name": "idle-se",
-        "imageNames": ["idle-se"]
+        "imageNames": [
+          "character-texture-atlas_idle-se"
+        ]
       },
       "s": {
         "name": "idle-s",
-        "imageNames": ["idle-s"]
+        "imageNames": [
+          "character-texture-atlas_idle-s"
+        ]
       },
       "sw": {
         "name": "idle-sw",
-        "imageNames": ["idle-sw"]
+        "imageNames": [
+          "character-texture-atlas_idle-sw"
+        ]
       },
       "w": {
         "name": "idle-w",
-        "imageNames": ["idle-w"]
+        "imageNames": [
+          "character-texture-atlas_idle-w"
+        ]
       },
       "nw": {
         "name": "idle-nw",
-        "imageNames": ["idle-nw"]
+        "imageNames": [
+          "character-texture-atlas_idle-nw"
+        ]
       },
       "n": {
         "name": "idle-n",
-        "imageNames": ["idle-n"]
+        "imageNames": [
+          "character-texture-atlas_idle-n"
+        ]
       },
       "ne": {
         "name": "idle-ne",
-        "imageNames": ["idle-ne"]
+        "imageNames": [
+          "character-texture-atlas_idle-ne"
+        ]
       }
     },
     "walk": {
@@ -41,49 +57,89 @@
         "name": "walk-e",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-e-1", "walk-e-2", "walk-e-3", "walk-e-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-e-1",
+          "character-texture-atlas_walk-e-2",
+          "character-texture-atlas_walk-e-3",
+          "character-texture-atlas_walk-e-4"
+        ]
       },
       "se": {
         "name": "walk-se",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-se-1", "walk-se-2", "walk-se-3", "walk-se-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-se-1",
+          "character-texture-atlas_walk-se-2",
+          "character-texture-atlas_walk-se-3",
+          "character-texture-atlas_walk-se-4"
+        ]
       },
       "s": {
         "name": "walk-s",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-s-1", "walk-s-2", "walk-s-3", "walk-s-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-s-1",
+          "character-texture-atlas_walk-s-2",
+          "character-texture-atlas_walk-s-3",
+          "character-texture-atlas_walk-s-4"
+        ]
       },
       "sw": {
         "name": "walk-sw",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-sw-1", "walk-sw-2", "walk-sw-3", "walk-sw-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-sw-1",
+          "character-texture-atlas_walk-sw-2",
+          "character-texture-atlas_walk-sw-3",
+          "character-texture-atlas_walk-sw-4"
+        ]
       },
       "w": {
         "name": "walk-w",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-w-1", "walk-w-2", "walk-w-3", "walk-w-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-w-1",
+          "character-texture-atlas_walk-w-2",
+          "character-texture-atlas_walk-w-3",
+          "character-texture-atlas_walk-w-4"
+        ]
       },
       "nw": {
         "name": "walk-nw",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-nw-1", "walk-nw-2", "walk-nw-3", "walk-nw-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-nw-1",
+          "character-texture-atlas_walk-nw-2",
+          "character-texture-atlas_walk-nw-3",
+          "character-texture-atlas_walk-nw-4"
+        ]
       },
       "n": {
         "name": "walk-n",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-n-1", "walk-n-2", "walk-n-3", "walk-n-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-n-1",
+          "character-texture-atlas_walk-n-2",
+          "character-texture-atlas_walk-n-3",
+          "character-texture-atlas_walk-n-4"
+        ]
       },
       "ne": {
         "name": "walk-ne",
         "frameCount": 4,
         "frameRate": 10,
-        "imageNames": ["walk-ne-1", "walk-ne-2", "walk-ne-3", "walk-ne-4"]
+        "imageNames": [
+          "character-texture-atlas_walk-ne-1",
+          "character-texture-atlas_walk-ne-2",
+          "character-texture-atlas_walk-ne-3",
+          "character-texture-atlas_walk-ne-4"
+        ]
       }
     },
     "die": {
@@ -92,56 +148,96 @@
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-e-1", "die-e-2", "die-e-3", "die-e-4"]
+        "imageNames": [
+          "character-texture-atlas_die-e-1",
+          "character-texture-atlas_die-e-2",
+          "character-texture-atlas_die-e-3",
+          "character-texture-atlas_die-e-4"
+        ]
       },
       "se": {
         "name": "die-se",
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-se-1", "die-se-2", "die-se-3", "die-se-4"]
+        "imageNames": [
+          "character-texture-atlas_die-se-1",
+          "character-texture-atlas_die-se-2",
+          "character-texture-atlas_die-se-3",
+          "character-texture-atlas_die-se-4"
+        ]
       },
       "s": {
         "name": "die-s",
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-s-1", "die-s-2", "die-s-3", "die-s-4"]
+        "imageNames": [
+          "character-texture-atlas_die-s-1",
+          "character-texture-atlas_die-s-2",
+          "character-texture-atlas_die-s-3",
+          "character-texture-atlas_die-s-4"
+        ]
       },
       "sw": {
         "name": "die-sw",
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-sw-1", "die-sw-2", "die-sw-3", "die-sw-4"]
+        "imageNames": [
+          "character-texture-atlas_die-sw-1",
+          "character-texture-atlas_die-sw-2",
+          "character-texture-atlas_die-sw-3",
+          "character-texture-atlas_die-sw-4"
+        ]
       },
       "w": {
         "name": "die-w",
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-w-1", "die-w-2", "die-w-3", "die-w-4"]
+        "imageNames": [
+          "character-texture-atlas_die-w-1",
+          "character-texture-atlas_die-w-2",
+          "character-texture-atlas_die-w-3",
+          "character-texture-atlas_die-w-4"
+        ]
       },
       "nw": {
         "name": "die-nw",
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-nw-1", "die-nw-2", "die-nw-3", "die-nw-4"]
+        "imageNames": [
+          "character-texture-atlas_die-nw-1",
+          "character-texture-atlas_die-nw-2",
+          "character-texture-atlas_die-nw-3",
+          "character-texture-atlas_die-nw-4"
+        ]
       },
       "n": {
         "name": "die-n",
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-n-1", "die-n-2", "die-n-3", "die-n-4"]
+        "imageNames": [
+          "character-texture-atlas_die-n-1",
+          "character-texture-atlas_die-n-2",
+          "character-texture-atlas_die-n-3",
+          "character-texture-atlas_die-n-4"
+        ]
       },
       "ne": {
         "name": "die-ne",
         "frameCount": 4,
         "frameRate": 10,
         "mode": "play-once-and-stop",
-        "imageNames": ["die-ne-1", "die-ne-2", "die-ne-3", "die-ne-4"]
+        "imageNames": [
+          "character-texture-atlas_die-ne-1",
+          "character-texture-atlas_die-ne-2",
+          "character-texture-atlas_die-ne-3",
+          "character-texture-atlas_die-ne-4"
+        ]
       }
     }
   },

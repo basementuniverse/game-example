@@ -30,12 +30,28 @@
     "args": ["./content/menu-title.png"]
   },
   {
+    "name": "menu-font-spritesheet",
+    "type": "image",
+    "args": ["./content/image-font.png"]
+  },
+  {
+    "name": "menu-font",
+    "type": "json",
+    "args": ["http://localhost:8080/content/image-font-data.json"],
+    "processors": [
+      {
+        "name": "imageFont",
+        "args": ["menu-font-spritesheet"]
+      }
+    ]
+  },
+  {
     "name": "character-spritesheet",
     "type": "image",
     "args": ["./content/character-spritesheet.png"]
   },
   {
-    "name": "character-texture-atlas-data",
+    "name": "character-texture-atlas",
     "type": "json",
     "args": ["http://localhost:8080/content/character-texture-atlas.json"],
     "processors": [
@@ -46,7 +62,7 @@
     ]
   },
   {
-    "name": "character-sprite-data",
+    "name": "character-sprite",
     "type": "json",
     "args": ["http://localhost:8080/content/character-sprite.json"],
     "processors": [
@@ -61,7 +77,7 @@
     "args": ["./content/terrain-tilesheet.png"]
   },
   {
-    "name": "terrain-texture-atlas-data",
+    "name": "terrain-texture-atlas",
     "type": "json",
     "args": ["http://localhost:8080/content/terrain-texture-atlas.json"],
     "processors": [
@@ -72,7 +88,7 @@
     ]
   },
   {
-    "name": "tile-map-data",
+    "name": "tile-map",
     "type": "json",
     "args": ["http://localhost:8080/content/tile-map.json"],
     "processors": [

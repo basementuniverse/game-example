@@ -14,22 +14,22 @@
       "tiles": [
         {
           "name": "grass",
-          "imageName": "terrain-grass",
+          "imageName": "terrain-texture-atlas_terrain-grass",
           "obstacle": false
         },
         {
           "name": "mountains",
-          "imageName": "terrain-mountains",
+          "imageName": "terrain-texture-atlas_terrain-mountains",
           "obstacle": true
         },
         {
           "name": "water",
-          "imageName": "terrain-water",
+          "imageName": "terrain-texture-atlas_terrain-water",
           "obstacle": true
         },
         {
           "name": "forest",
-          "imageName": "terrain-forest",
+          "imageName": "terrain-texture-atlas_terrain-forest",
           "obstacle": true
         }
       ],

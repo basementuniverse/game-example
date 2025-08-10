@@ -5,6 +5,7 @@ A simple game example using the following components:
 * [Camera](https://www.npmjs.com/package/@basementuniverse/camera)
 * [Content Manager](https://www.npmjs.com/package/@basementuniverse/content-manager)
 * [Debug](https://www.npmjs.com/package/@basementuniverse/debug)
+* [Image Font](https://www.npmjs.com/package/@basementuniverse/image-font)
 * [Input Manager](https://www.npmjs.com/package/@basementuniverse/input-manager)
 * [Scene Manager](https://www.npmjs.com/package/@basementuniverse/scene-manager)
 * [Sprite](https://www.npmjs.com/package/@basementuniverse/sprite)

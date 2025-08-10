@@ -1,4 +1,4 @@
-import { vec } from '@basementuniverse/vec';
+import { vec2 } from '@basementuniverse/vec';
 import Game from '../Game';
 import SceneManager, {
   Scene,
@@ -14,13 +14,10 @@ import Debug from '@basementuniverse/debug';
 
 export default class GameScene extends Scene {
   private static readonly TRANSITION_TIME: number = 1;
-
-  private static readonly STARTING_POSITION: vec = vec(512, 512);
+  private static readonly STARTING_POSITION: vec2 = vec2(512, 512);
 
   private camera: Camera;
-
   private map: TileMap;
-
   private player: Player;
 
   public constructor() {
@@ -52,13 +49,13 @@ export default class GameScene extends Scene {
     this.camera.scaleImmediate = 3;
 
     this.map = new TileMap(
-      ContentManager.get<TileMapOptions>('tile-map-data')!
+      ContentManager.get<TileMapOptions>('tile-map')!
     );
 
     this.player = new Player(
       GameScene.STARTING_POSITION,
       's',
-      ContentManager.get<SpriteOptions>('character-sprite-data')!
+      ContentManager.get<SpriteOptions>('character-sprite')!
     );
   }
 
@@ -111,10 +108,10 @@ export default class GameScene extends Scene {
     Debug.border(
       'test1',
       '',
-      vec(200),
+      vec2(200),
       {
         space: 'screen',
-        size: vec(200, 200),
+        size: vec2(200, 200),
         borderColour: '#f82',
         borderStyle: 'dashed',
         borderWidth: 4,
@@ -124,7 +121,7 @@ export default class GameScene extends Scene {
     Debug.border(
       'test2',
       '',
-      vec(100),
+      vec2(100),
       {
         space: 'world',
         radius: 200,
@@ -137,8 +134,8 @@ export default class GameScene extends Scene {
 
     Debug.marker(
       'player',
-      vec.str(vec.map(this.player.position, Math.floor)),
-      vec.add(this.player.position, vec(0, 30)),
+      vec2.str(vec2.map(this.player.position, Math.floor)),
+      vec2.add(this.player.position, vec2(0, 30)),
       {
         markerStyle: 'x',
         markerColour: '#ff0',
@@ -148,7 +145,7 @@ export default class GameScene extends Scene {
     );
 
     this.player.update(dt);
-    this.camera.position = vec.cpy(this.player.position);
+    this.camera.position = vec2.cpy(this.player.position);
   }
 
   public draw(context: CanvasRenderingContext2D) {
