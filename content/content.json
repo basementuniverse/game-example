@@ -53,7 +53,7 @@
   {
     "name": "character-texture-atlas",
     "type": "json",
-    "args": ["url:/content/character-texture-atlas.json"],
+    "args": ["url:content/character-texture-atlas.json"],
     "processors": [
       {
         "name": "textureAtlas",
@@ -64,7 +64,7 @@
   {
     "name": "character-sprite",
     "type": "json",
-    "args": ["url:/content/character-sprite.json"],
+    "args": ["url:content/character-sprite.json"],
     "processors": [
       {
         "name": "sprite"
@@ -79,7 +79,7 @@
   {
     "name": "terrain-texture-atlas",
     "type": "json",
-    "args": ["url:/content/terrain-texture-atlas.json"],
+    "args": ["url:content/terrain-texture-atlas.json"],
     "processors": [
       {
         "name": "textureAtlas",
@@ -90,7 +90,7 @@
   {
     "name": "tile-map",
     "type": "json",
-    "args": ["url:/content/tile-map.json"],
+    "args": ["url:content/tile-map.json"],
     "processors": [
       {
         "name": "tileMap",
