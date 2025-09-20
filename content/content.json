@@ -12,7 +12,7 @@
   {
     "name": "blur-shader",
     "type": "text",
-    "args": ["http://localhost:8080/content/blur.glsl"],
+    "args": ["url:/content/blur.glsl"],
     "processors": [
       {
         "name": "shader"
@@ -37,7 +37,7 @@
   {
     "name": "menu-font",
     "type": "json",
-    "args": ["http://localhost:8080/content/image-font-data.json"],
+    "args": ["url:/content/image-font-data.json"],
     "processors": [
       {
         "name": "imageFont",
@@ -53,7 +53,7 @@
   {
     "name": "character-texture-atlas",
     "type": "json",
-    "args": ["http://localhost:8080/content/character-texture-atlas.json"],
+    "args": ["url:/content/character-texture-atlas.json"],
     "processors": [
       {
         "name": "textureAtlas",
@@ -64,7 +64,7 @@
   {
     "name": "character-sprite",
     "type": "json",
-    "args": ["http://localhost:8080/content/character-sprite.json"],
+    "args": ["url:/content/character-sprite.json"],
     "processors": [
       {
         "name": "sprite"
@@ -79,7 +79,7 @@
   {
     "name": "terrain-texture-atlas",
     "type": "json",
-    "args": ["http://localhost:8080/content/terrain-texture-atlas.json"],
+    "args": ["url:/content/terrain-texture-atlas.json"],
     "processors": [
       {
         "name": "textureAtlas",
@@ -90,7 +90,7 @@
   {
     "name": "tile-map",
     "type": "json",
-    "args": ["http://localhost:8080/content/tile-map.json"],
+    "args": ["url:/content/tile-map.json"],
     "processors": [
       {
         "name": "tileMap",
