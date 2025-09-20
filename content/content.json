@@ -12,7 +12,7 @@
   {
     "name": "blur-shader",
     "type": "text",
-    "args": ["url:/content/blur.glsl"],
+    "args": ["url:content/blur.glsl"],
     "processors": [
       {
         "name": "shader"
@@ -37,7 +37,7 @@
   {
     "name": "menu-font",
     "type": "json",
-    "args": ["url:/content/image-font-data.json"],
+    "args": ["url:content/image-font-data.json"],
     "processors": [
       {
         "name": "imageFont",
